@@ -1,63 +1,205 @@
 <template>
-  <section class="py-20 md:py-32 bg-secondary-900 text-white">
-    <div class="container mx-auto px-4">
+  <section class="py-24 md:py-32 bg-gradient-to-br from-accent-100/50 via-cream-100 to-primary-100/50 relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-accent-100 rounded-full blur-3xl opacity-50"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-primary-100 rounded-full blur-3xl opacity-50"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <p class="text-primary-400 font-semibold text-sm md:text-base uppercase tracking-wider mb-2">
-          Referencie
-        </p>
-        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">
-          Čo hovoria naši klienti
-        </h2>
-        <p class="text-lg text-gray-300">
-          Vaša spokojnosť je naša najväčšia odmena
+        <p class="section-subtitle">Recenzie</p>
+        <h2 class="section-title">Čo hovoria naše klientky</h2>
+        <p class="text-lg text-brown-600 mt-6">
+          Spokojnosť našich klientiek je pre nás prioritou
         </p>
       </div>
 
       <!-- Testimonials Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div v-for="(testimonial, index) in testimonials" :key="index"
-          class="bg-secondary-800 rounded-2xl p-8 hover:bg-secondary-700 transition-colors duration-300">
-          <div class="flex items-center mb-4">
-            <div class="flex text-primary-400">
-              <Icon v-for="i in 5" :key="i" name="mdi:star" class="text-xl" />
-            </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div v-for="(testimonial, index) in testimonials" :key="index" 
+             class="card-elegant p-8 relative cursor-pointer group"
+             @click="openModal(testimonial)">
+          <!-- Quote icon -->
+          <div class="absolute top-6 right-6">
+            <Icon name="mdi:format-quote-close" class="text-4xl text-accent-200" />
           </div>
-          <p class="text-gray-300 mb-6 italic">
-            "{{ testimonial.text }}"
+          
+          <!-- Stars -->
+          <div class="flex space-x-1 mb-4">
+            <Icon v-for="star in 5" :key="star" name="mdi:star" class="text-xl text-accent-400" />
+          </div>
+          
+          <!-- Content (shortened) -->
+          <p class="text-brown-600 mb-6 leading-relaxed italic line-clamp-4">
+            "{{ testimonial.shortText }}"
           </p>
-          <div class="flex items-center">
-            <div class="w-12 h-12 rounded-full bg-primary-600 flex items-center justify-center text-white font-bold text-lg mr-4">
-              {{ testimonial.name.charAt(0) }}
+          
+          <!-- Read more indicator -->
+          <div class="flex items-center text-accent-600 text-sm font-medium mb-4 group-hover:text-accent-700 transition-colors">
+            <span>Čítať celú recenziu</span>
+            <Icon name="mdi:arrow-right" class="ml-1 group-hover:translate-x-1 transition-transform" />
+          </div>
+          
+          <!-- Author -->
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-accent-400 to-accent-500 flex items-center justify-center shadow-soft">
+              <span class="font-serif font-bold text-white text-lg">{{ testimonial.initials }}</span>
             </div>
             <div>
-              <p class="font-semibold">{{ testimonial.name }}</p>
-              <p class="text-sm text-gray-400">{{ testimonial.service }}</p>
+              <p class="font-serif font-bold text-brown-800">{{ testimonial.name }}</p>
+              <p class="text-sm text-brown-500">{{ testimonial.service }}</p>
+            </div>
+          </div>
+          
+          <!-- Time ago -->
+          <p class="text-xs text-brown-400 mt-3">{{ testimonial.timeAgo }}</p>
+        </div>
+      </div>
+
+      <!-- Google Reviews link -->
+      <div class="text-center mt-12">
+        <a href="https://share.google/lsndT11p2zv5kQxGj" 
+           target="_blank"
+           class="inline-flex items-center space-x-2 text-accent-600 hover:text-accent-700 font-medium transition-colors">
+          <Icon name="mdi:google" class="text-xl" />
+          <span>Zobraziť všetky recenzie na Google</span>
+          <Icon name="mdi:arrow-right" class="text-lg" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <Teleport to="body">
+      <Transition name="modal">
+        <div v-if="isModalOpen" class="fixed inset-0 z-50 flex items-center justify-center p-4" @click="closeModal">
+          <!-- Backdrop -->
+          <div class="absolute inset-0 bg-brown-900/80 backdrop-blur-sm"></div>
+          
+          <!-- Modal Content -->
+          <div class="relative bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl" @click.stop>
+            <!-- Close button -->
+            <button @click="closeModal" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-cream-100 hover:bg-cream-200 flex items-center justify-center transition-colors z-10">
+              <Icon name="mdi:close" class="text-xl text-brown-600" />
+            </button>
+            
+            <div class="p-8 md:p-10">
+              <!-- Stars -->
+              <div class="flex space-x-1 mb-6">
+                <Icon v-for="star in 5" :key="star" name="mdi:star" class="text-2xl text-accent-400" />
+              </div>
+              
+              <!-- Full review text -->
+              <p class="text-brown-700 text-lg leading-relaxed mb-8 whitespace-pre-line">
+                "{{ selectedTestimonial?.fullText }}"
+              </p>
+              
+              <!-- Author -->
+              <div class="flex items-center space-x-4 pt-6 border-t border-cream-200">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-accent-400 to-accent-500 flex items-center justify-center shadow-soft">
+                  <span class="font-serif font-bold text-white text-2xl">{{ selectedTestimonial?.initials }}</span>
+                </div>
+                <div>
+                  <p class="font-serif font-bold text-brown-800 text-xl">{{ selectedTestimonial?.name }}</p>
+                  <p class="text-brown-500">{{ selectedTestimonial?.service }}</p>
+                  <p class="text-sm text-brown-400 mt-1">{{ selectedTestimonial?.timeAgo }}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </Transition>
+    </Teleport>
   </section>
 </template>
 
 <script setup lang="ts">
-const testimonials = [
+import { ref } from 'vue'
+
+interface Testimonial {
+  name: string
+  initials: string
+  service: string
+  shortText: string
+  fullText: string
+  timeAgo: string
+}
+
+const testimonials: Testimonial[] = [
   {
-    name: 'Petra Nováková',
-    service: 'Dámske strihanie',
-    text: 'Úžasný prístup a profesionalita. Konečne som našla kaderníčku, ktorá chápe moje vlasy. Chodím sem už rok a stále som nadšená!'
+    name: 'Vanesa L.',
+    initials: 'VL',
+    service: 'Blond farbenie',
+    timeAgo: 'pred 5 mesiacmi',
+    shortText: 'Nájsť kaderníčku, ktorá naozaj rozumie vlasom a najmä blond farbe je dnes veľmi náročné. Meri je však úplne šikovná. Od prvého sedenia som bola nadšená...',
+    fullText: `Nájsť kaderníčku, ktorá naozaj rozumie vlasom a najmä blond farbe je dnes veľmi náročné. Kým som objavila Meri, mala som len samé zlé skúsenosti. Farby mi nikdy nevyšli tak, ako som si predstavovala a často som odchádzala s fľakatými, žltými alebo aj s ryšavími vlasmi.
+
+Meri je však úplne šikovná. Od prvého sedenia som bola nadšená. Konečne niekto, kto vie vytvoriť krásnu, čistú a prirodzene pôsobiacu blond farbu a nie ako také kuriatko 🥹🙏
+
+Prišla som k nej po nevydarenej farbe od inej kaderníčky a Meri to okamžite napravila. Zachránila mi vlasy aj náladu. Odvtedy by som nemenila a vraciam sa k nej pravidelne a vždy s radosťou.
+
+Okrem šikovných rúk má aj skvelý prístup a je veľmi milá, ústretová a vždy sa u nej cítim príjemne.`
   },
   {
-    name: 'Martin Kováč',
-    service: 'Pánske strihanie',
-    text: 'Skvelé miesto s priateľskou atmosférou. Vždy odchádzam spokojný a strih vydrží dlho. Určite odporúčam!'
+    name: 'Michaela K.',
+    initials: 'MK',
+    service: 'Pravidelná klientka',
+    timeAgo: 'pred 8 mesiacmi',
+    shortText: 'K Meri chodím viac než 4 roky. Je najúžasnejšia a nedám na ňu dopustiť! Vďaka nej mám zdravé a dokonalé vlasy, ktoré som nikdy predtým nemala...',
+    fullText: `K Meri chodím viac než 4 roky ✨. Je najúžasnejšia a nedám na ňu dopustiť! 🙂
+
+Vďaka nej, jej prístupu a vlasovej kozmetike, ktorú používa mám zdravé a dokonalé vlasy, ktoré som nikdy predtým nemala.
+
+Vždy od nej odchádzam s úsmevom od ucha k uchu 🙂✨`
   },
   {
-    name: 'Lucia Horváthová',
-    service: 'Svadobný účes',
-    text: 'Pre môj svadobný deň vytvorili absolútne dokonalý účes. Všetko prebehlo hladko a cítila som sa ako princezná. Ďakujem!'
+    name: 'Veronika',
+    initials: 'V',
+    service: 'Pravidelná klientka',
+    timeAgo: 'pred 4 rokmi',
+    shortText: 'K Meri chodím už viac ako 4 roky a vždy odchádzam spokojná. Veľmi príjemná, komunikatívna kaderníčka, používa len kvalitnú kozmetiku...',
+    fullText: `K Meri chodím už viac ako 4 roky a vždy odchádzam spokojná.
+
+Veľmi príjemná, komunikatívna kaderníčka, používa len kvalitnú kozmetiku. Rovnako viete u nej zakúpiť aj vlasovú kozmetiku kvalitnej značky.
+
+Krátka čakacia doba na termín. Takisto bezproblémové parkovanie pred salónom. Určite odporúčam!`
   }
 ]
+
+const isModalOpen = ref(false)
+const selectedTestimonial = ref<Testimonial | null>(null)
+
+const openModal = (testimonial: Testimonial) => {
+  selectedTestimonial.value = testimonial
+  isModalOpen.value = true
+  document.body.style.overflow = 'hidden'
+}
+
+const closeModal = () => {
+  isModalOpen.value = false
+  document.body.style.overflow = ''
+}
 </script>
 
+<style scoped>
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: all 0.3s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-enter-from .relative,
+.modal-leave-to .relative {
+  transform: scale(0.95);
+}
+</style>

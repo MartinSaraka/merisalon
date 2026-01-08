@@ -3,82 +3,66 @@
     <Navigation />
     
     <!-- Page Header -->
-    <section class="pt-32 pb-16 bg-gradient-to-br from-secondary-800 to-secondary-900 text-white">
+    <section class="pt-32 pb-16 bg-gradient-to-br from-brown-800 to-brown-700 text-white">
       <div class="container mx-auto px-4 text-center">
         <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4">Obchodné podmienky</h1>
-        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
-          Pravidlá poskytovania služieb v našom salóne
-        </p>
+        <p class="text-cream-200">Podmienky poskytovania služieb</p>
       </div>
     </section>
 
     <!-- Content -->
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-4 max-w-4xl">
-        <div class="prose prose-lg max-w-none">
-          <h2>1. Základné ustanovenia</h2>
-          <p>
-            Tieto obchodné podmienky upravujú vzťahy medzi prevádzkovateľom Salon Elegance s.r.o. 
-            a klientmi využívajúcimi služby salónu.
+    <section class="py-16 md:py-24 bg-cream-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="card-elegant p-8 md:p-12 prose prose-brown max-w-none">
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">1. Základné ustanovenia</h2>
+            <p class="text-brown-600 mb-6">
+              Tieto obchodné podmienky upravujú vzťah medzi Salon Meri (ďalej len "poskytovateľ") 
+              a zákazníkom pri poskytovaní kaderníckych služieb.
           </p>
 
-          <h2>2. Rezervácia termínu</h2>
-          <ul>
-            <li>Rezerváciu je možné vykonať online, telefonicky alebo osobne</li>
-            <li>Rezervácia je záväzná po jej potvrdení zo strany salónu</li>
-            <li>V prípade potreby zrušenia rezervácie je nutné informovať salón minimálne 24 hodín vopred</li>
-            <li>Pri opakovanom nezjavení sa na rezervovaný termín si vyhradzujeme právo požadovať zálohu</li>
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">2. Rezervácie</h2>
+            <p class="text-brown-600 mb-4">
+              Rezervácie je možné uskutočniť:
+            </p>
+            <ul class="list-disc list-inside text-brown-600 mb-6 space-y-2">
+              <li>Online cez rezervačný systém Bookio</li>
+              <li>Telefonicky na čísle 0902 730 860</li>
           </ul>
 
-          <h2>3. Cenník a platobné podmienky</h2>
-          <ul>
-            <li>Aktuálny cenník služieb je dostupný v salóne a na webovej stránke</li>
-            <li>Ceny zahŕňajú všetky poplatky a DPH</li>
-            <li>Platba je možná v hotovosti alebo platobnou kartou</li>
-            <li>Pri špeciálnych službách môže byť požadovaná záloha</li>
-          </ul>
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">3. Zrušenie rezervácie</h2>
+            <p class="text-brown-600 mb-6">
+              Rezerváciu je možné zrušiť alebo zmeniť najneskôr 24 hodín pred plánovaným termínom. 
+              V prípade neskoršieho zrušenia alebo nedostavenia sa na termín si vyhradzujeme právo 
+              účtovať storno poplatok.
+            </p>
 
-          <h2>4. Reklamácie</h2>
-          <ul>
-            <li>Reklamácie je možné uplatniť do 7 dní od poskytnutia služby</li>
-            <li>Reklamácie vybavujeme do 14 pracovných dní</li>
-            <li>Pri oprávnenej reklamácii poskytneme nápravu zadarmo</li>
-          </ul>
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">4. Ceny služieb</h2>
+            <p class="text-brown-600 mb-6">
+              Ceny služieb sú uvedené v cenníku na našej webovej stránke. Konečná cena môže 
+              byť upravená podľa dĺžky, hustoty a stavu vlasov po osobnej konzultácii.
+            </p>
 
-          <h2>5. Zodpovednosť</h2>
-          <p>
-            Salón nenesie zodpovednosť za:
-          </p>
-          <ul>
-            <li>Alergické reakcie na použité prípravky (odporúčame vopred informovať o alergiách)</li>
-            <li>Výsledok služby, ak klient neposkytol pravdivé informácie o predchádzajúcich úpravách</li>
-            <li>Cennosti zanechané v salóne</li>
-          </ul>
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">5. Platba</h2>
+            <p class="text-brown-600 mb-6">
+              Platba za služby sa uskutočňuje v hotovosti alebo kartou po dokončení služby.
+            </p>
 
-          <h2>6. Zrušenie služby zo strany salónu</h2>
-          <p>
-            Vyhradzujeme si právo zrušiť službu v prípade:
-          </p>
-          <ul>
-            <li>Nepriaznivých vonkajších podmienok (napr. prírodná katastrofa)</li>
-            <li>Ochorenia stylistu</li>
-            <li>Nevhodného správania klienta</li>
-          </ul>
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">6. Reklamácie</h2>
+            <p class="text-brown-600 mb-6">
+              V prípade nespokojnosti so službou nás prosím kontaktujte do 3 pracovných dní 
+              od poskytnutia služby. Každú reklamáciu riešime individuálne s cieľom dosiahnuť 
+              spokojnosť zákazníka.
+            </p>
 
-          <h2>7. Záverečné ustanovenia</h2>
-          <p>
-            Tieto obchodné podmienky nadobúdajú účinnosť dňom ich zverejnenia. 
-            Vyhradzujeme si právo zmeny obchodných podmienok.
-          </p>
-
-          <h2>8. Kontakt pre riešenie sporov</h2>
-          <p>
-            V prípade sporov nás kontaktujte na: <a href="mailto:info@salonelegance.sk">info@salonelegance.sk</a>
-          </p>
-
-          <p class="text-sm text-gray-600 mt-8">
-            Posledná aktualizácia: {{ currentDate }}
-          </p>
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">7. Kontakt</h2>
+            <p class="text-brown-600">
+              Salon Meri<br />
+              Ivanská cesta 36A, 821 04 Bratislava - Ružinov<br />
+              Tel.: 0902 730 860<br />
+              Email: galojanm@gmail.com
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -88,35 +72,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-
 useHead({
-  title: 'Obchodné podmienky - Salon Elegance',
+  title: 'Obchodné podmienky | Salon Meri',
   meta: [
-    { name: 'description', content: 'Obchodné podmienky poskytovania služieb v Salon Elegance' }
+    { name: 'description', content: 'Obchodné podmienky a pravidlá poskytovania služieb v Salon Meri.' }
   ]
 })
-
-const currentDate = computed(() => {
-  return new Date().toLocaleDateString('sk-SK', { year: 'numeric', month: 'long', day: 'numeric' })
-})
 </script>
-
-<style scoped>
-.prose h2 {
-  @apply font-serif text-2xl font-bold text-secondary-900 mt-8 mb-4;
-}
-
-.prose p {
-  @apply text-secondary-700 mb-4 leading-relaxed;
-}
-
-.prose ul {
-  @apply list-disc list-inside space-y-2 text-secondary-700 mb-4;
-}
-
-.prose a {
-  @apply text-primary-600 hover:text-primary-700 transition-colors;
-}
-</style>
-

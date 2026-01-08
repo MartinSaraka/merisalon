@@ -3,69 +3,64 @@
     <Navigation />
     
     <!-- Page Header -->
-    <section class="pt-32 pb-16 bg-gradient-to-br from-secondary-800 to-secondary-900 text-white">
+    <section class="pt-32 pb-16 bg-gradient-to-br from-brown-800 to-brown-700 text-white">
       <div class="container mx-auto px-4 text-center">
         <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4">Ochrana osobných údajov</h1>
-        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
-          Vaše súkromie je pre nás prioritou
-        </p>
+        <p class="text-cream-200">Informácie o spracovaní vašich osobných údajov</p>
       </div>
     </section>
 
     <!-- Content -->
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-4 max-w-4xl">
-        <div class="prose prose-lg max-w-none">
-          <h2>1. Správca osobných údajov</h2>
-          <p>
-            Správcom vašich osobných údajov je Salon Elegance s.r.o., so sídlom Hlavná ulica 123, 811 01 Bratislava, IČO: 12345678.
+    <section class="py-16 md:py-24 bg-cream-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="card-elegant p-8 md:p-12 prose prose-brown max-w-none">
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">1. Prevádzkovateľ</h2>
+            <p class="text-brown-600 mb-6">
+              Prevádzkovateľom osobných údajov je Salon Meri, so sídlom Ivanská cesta 36A, 
+              821 04 Bratislava - Ružinov, kontakt: galojanm@gmail.com, tel.: 0902 730 860.
           </p>
 
-          <h2>2. Aké údaje zbierame</h2>
-          <p>Pri rezervácii služby od vás môžeme požadovať:</p>
-          <ul>
-            <li>Meno a priezvisko</li>
-            <li>Telefónne číslo</li>
-            <li>Emailovú adresu</li>
-            <li>Informácie o preferovaných službách</li>
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">2. Účel spracovania</h2>
+            <p class="text-brown-600 mb-6">
+              Vaše osobné údaje spracovávame za účelom:
+            </p>
+            <ul class="list-disc list-inside text-brown-600 mb-6 space-y-2">
+              <li>Rezervácie termínov a poskytovania služieb</li>
+              <li>Komunikácie ohľadom rezervácií</li>
+              <li>Zasielania pripomienok termínov</li>
           </ul>
 
-          <h2>3. Účel spracovania</h2>
-          <p>Vaše osobné údaje spracovávame za účelom:</p>
-          <ul>
-            <li>Spracovania a potvrdenia rezervácií</li>
-            <li>Komunikácie ohľadom vašej návštevy</li>
-            <li>Poskytnutia požadovaných služieb</li>
-            <li>Zasielania marketingových informácií (so súhlasom)</li>
-          </ul>
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">3. Rozsah údajov</h2>
+            <p class="text-brown-600 mb-6">
+              Spracovávame nasledovné kategórie osobných údajov: meno, priezvisko, 
+              telefónne číslo, e-mailová adresa.
+            </p>
 
-          <h2>4. Doba uchovávania</h2>
-          <p>
-            Vaše osobné údaje uchovávame po dobu nevyhnutnú na splnenie účelu, na ktorý boli získané, 
-            alebo po dobu požadovanú zákonom.
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">4. Doba uchovávania</h2>
+            <p class="text-brown-600 mb-6">
+              Osobné údaje uchovávame po dobu nevyhnutnú na splnenie účelu spracovania, 
+              maximálne však 3 roky od posledného poskytnutia služby.
           </p>
 
-          <h2>5. Vaše práva</h2>
-          <p>Máte právo na:</p>
-          <ul>
-            <li>Prístup k svojim osobným údajom</li>
-            <li>Opravu nepresných údajov</li>
-            <li>Vymazanie údajov</li>
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">5. Vaše práva</h2>
+            <p class="text-brown-600 mb-4">
+              Máte právo na:
+            </p>
+            <ul class="list-disc list-inside text-brown-600 mb-6 space-y-2">
+              <li>Prístup k vašim osobným údajom</li>
+              <li>Opravu nesprávnych údajov</li>
+              <li>Vymazanie údajov (právo na zabudnutie)</li>
             <li>Obmedzenie spracovania</li>
-            <li>Prenosnosť údajov</li>
-            <li>Námietku proti spracovaniu</li>
+              <li>Podanie sťažnosti na Úrade na ochranu osobných údajov SR</li>
           </ul>
 
-          <h2>6. Kontakt</h2>
-          <p>
-            V prípade otázok týkajúcich sa ochrany osobných údajov nás kontaktujte na adrese 
-            <a href="mailto:gdpr@salonelegance.sk">gdpr@salonelegance.sk</a> alebo telefonicky na 
-            <a href="tel:+421901234567">+421 901 234 567</a>.
-          </p>
-
-          <p class="text-sm text-gray-600 mt-8">
-            Posledná aktualizácia: {{ currentDate }}
-          </p>
+            <h2 class="font-serif text-2xl font-bold text-brown-800 mb-4">6. Kontakt</h2>
+            <p class="text-brown-600">
+              V prípade akýchkoľvek otázok ohľadom spracovania vašich osobných údajov 
+              nás kontaktujte na e-mailovej adrese: galojanm@gmail.com
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -75,35 +70,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-
 useHead({
-  title: 'Ochrana osobných údajov - Salon Elegance',
+  title: 'Ochrana osobných údajov | Salon Meri',
   meta: [
-    { name: 'description', content: 'Informácie o ochrane osobných údajov v Salon Elegance' }
+    { name: 'description', content: 'Informácie o spracovaní a ochrane osobných údajov v Salon Meri.' }
   ]
 })
-
-const currentDate = computed(() => {
-  return new Date().toLocaleDateString('sk-SK', { year: 'numeric', month: 'long', day: 'numeric' })
-})
 </script>
-
-<style scoped>
-.prose h2 {
-  @apply font-serif text-2xl font-bold text-secondary-900 mt-8 mb-4;
-}
-
-.prose p {
-  @apply text-secondary-700 mb-4 leading-relaxed;
-}
-
-.prose ul {
-  @apply list-disc list-inside space-y-2 text-secondary-700 mb-4;
-}
-
-.prose a {
-  @apply text-primary-600 hover:text-primary-700 transition-colors;
-}
-</style>
-

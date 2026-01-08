@@ -1,88 +1,82 @@
 <template>
-  <section class="relative h-screen flex items-center justify-center overflow-hidden">
-    <!-- Background Image with Overlay -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Image with Overlay - very soft cream like pricing section -->
     <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 bg-gradient-to-br from-primary-900/40 via-secondary-900/50 to-primary-800/40 z-10"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-cream-50/95 via-white/90 to-cream-100/85 z-10"></div>
       <img 
-        src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2074&auto=format&fit=crop"
-        alt="Salon Interior"
-        class="w-full h-full object-cover"
+        src="https://images.unsplash.com/photo-1633681122967-1a1b0e5ede23?q=80&w=2070&auto=format&fit=crop"
+        alt="Salon Meri - Interiér kaderníctva"
+        class="w-full h-full object-cover opacity-40"
+        loading="eager"
       />
     </div>
 
-    <!-- Animated Background Elements -->
-    <div class="absolute inset-0 z-10 overflow-hidden">
-      <div class="absolute top-20 left-10 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
-      <div class="absolute bottom-20 right-10 w-96 h-96 bg-primary-400/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s"></div>
+    <!-- Decorative Elements matching pricing section style -->
+    <div class="absolute inset-0 z-10 overflow-hidden pointer-events-none opacity-40">
+      <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary-200 rounded-full blur-3xl"></div>
+
+      <div class="absolute top-1/2 left-1/3 w-72 h-72 bg-cream-300 rounded-full blur-3xl"></div>
     </div>
 
     <!-- Content -->
-    <div class="relative z-20 container mx-auto px-4 text-center">
-      <div class="max-w-4xl mx-auto space-y-6 md:space-y-8 animate-fade-in">
-        <div class="space-y-3 md:space-y-4">
-          <p class="hidden md:block text-primary-300 font-semibold text-lg md:text-xl uppercase tracking-widest animate-slide-down">
-            Váš štýl, naša vášeň
-          </p>
-          <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight animate-slide-up">
-            Kde krása<br />stretáva umenie
+    <div class="relative z-20 container mx-auto px-4 text-center py-20">
+      <div class="max-w-4xl mx-auto space-y-8">
+        <!-- Main Heading -->
+        <div class="space-y-4 animate-slide-up">
+          <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-brown-800 leading-[1.1]">
+            Vaša krása,<br />
+            <span class="text-gradient bg-gradient-to-r from-accent-500 via-accent-600 to-accent-500 bg-clip-text text-transparent">
+              naša vášeň
+            </span>
           </h1>
-          <p class="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto animate-slide-up px-4" style="animation-delay: 0.2s">
-            Profesionálne kaderníctvo a kozmetické služby pre vašu dokonalú transformáciu
+          <p class="text-lg sm:text-xl md:text-2xl text-brown-600 max-w-2xl mx-auto leading-relaxed animate-slide-up animation-delay-200">
+            Farbenie, strihanie, regenerácia vlasov a líčenie v príjemnom prostredí s individuálnym prístupom.
           </p>
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center animate-scale-in px-4" style="animation-delay: 0.4s">
-          <NuxtLink to="/rezervacia" class="btn-primary text-base md:text-lg px-8 md:px-12 py-3 md:py-4 group w-full sm:w-auto">
-            Rezervovať termín
-            <Icon name="mdi:arrow-right" class="inline ml-2 group-hover:translate-x-2 transition-transform" />
+        <!-- CTA Buttons - matching accent colors -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in animation-delay-400">
+          <NuxtLink to="/rezervacia" class="group w-full sm:w-auto bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white text-lg px-10 py-4 rounded-full shadow-soft hover:shadow-soft-lg transition-all duration-300">
+            <span class="flex items-center justify-center space-x-2">
+              <span>Rezervovať termín</span>
+              <Icon name="mdi:arrow-right" class="group-hover:translate-x-1 transition-transform" />
+            </span>
           </NuxtLink>
-          <a href="#sluzby" class="btn-secondary text-base md:text-lg px-8 md:px-12 py-3 md:py-4 w-full sm:w-auto">
-            Naše služby
+          <a href="tel:+421902730860" class="w-full sm:w-auto text-lg px-10 py-4 rounded-full bg-white border-2 border-accent-200 text-brown-700 hover:border-accent-400 hover:bg-accent-50 transition-all duration-300">
+            <span class="flex items-center justify-center space-x-2">
+              <Icon name="mdi:phone" class="text-accent-500" />
+              <span>0902 730 860</span>
+            </span>
           </a>
         </div>
 
-        <!-- Features -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 mt-8 md:mt-16 animate-fade-in max-w-2xl md:max-w-4xl mx-auto px-4" style="animation-delay: 0.6s">
-          <div class="flex items-center md:justify-center space-x-4 text-white bg-white/10 backdrop-blur-sm rounded-xl p-4 md:bg-transparent md:backdrop-blur-none">
-            <div class="flex-shrink-0">
-              <Icon name="mdi:clock-outline" class="text-4xl md:text-3xl text-primary-400" />
+        <!-- Benefits - matching site style -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16 max-w-2xl mx-auto animate-fade-in animation-delay-600">
+          <div class="bg-white rounded-2xl p-5 flex items-center space-x-4 shadow-soft border border-cream-200 hover:border-accent-200 transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent-400 to-accent-500 flex items-center justify-center flex-shrink-0 shadow-soft">
+              <Icon name="mdi:home-heart" class="text-xl text-white" />
             </div>
             <div class="text-left">
-              <p class="font-bold text-xl md:text-lg leading-tight">15+ rokov</p>
-              <p class="text-sm text-gray-300">Skúseností</p>
+              <p class="font-serif font-bold text-brown-800 text-lg">Pohodlie domova</p>
+              <p class="text-sm text-brown-500">Príjemné prostredie</p>
             </div>
           </div>
-          <div class="flex items-center md:justify-center space-x-4 text-white bg-white/10 backdrop-blur-sm rounded-xl p-4 md:bg-transparent md:backdrop-blur-none">
-            <div class="flex-shrink-0">
-              <Icon name="mdi:account-group" class="text-4xl md:text-3xl text-primary-400" />
+          <div class="bg-white rounded-2xl p-5 flex items-center space-x-4 shadow-soft border border-cream-200 hover:border-accent-200 transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent-400 to-accent-500 flex items-center justify-center flex-shrink-0 shadow-soft">
+              <Icon name="mdi:star-circle" class="text-xl text-white" />
             </div>
             <div class="text-left">
-              <p class="font-bold text-xl md:text-lg leading-tight">5000+</p>
-              <p class="text-sm text-gray-300">Spokojných klientov</p>
-            </div>
-          </div>
-          <div class="flex items-center md:justify-center space-x-4 text-white bg-white/10 backdrop-blur-sm rounded-xl p-4 md:bg-transparent md:backdrop-blur-none">
-            <div class="flex-shrink-0">
-              <Icon name="mdi:star" class="text-4xl md:text-3xl text-primary-400" />
-            </div>
-            <div class="text-left">
-              <p class="font-bold text-xl md:text-lg leading-tight">4.9/5</p>
-              <p class="text-sm text-gray-300">Hodnotenie</p>
+              <p class="font-serif font-bold text-brown-800 text-lg">Kvalitné služby</p>
+              <p class="text-sm text-brown-500">Profesionálny prístup</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-      <a href="#sluzby" class="text-white">
-        <Icon name="mdi:chevron-down" class="text-4xl" />
-      </a>
-    </div>
+
   </section>
 </template>
 
 <script setup lang="ts">
 </script>
-
