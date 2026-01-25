@@ -4,14 +4,14 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
-        <NuxtLink to="/" class="flex items-center space-x-3 group">
-          <img src="/img/logo_meri.png" alt="Salon Meri" class="h-36 w-auto transition-transform duration-300 group-hover:scale-105 drop-shadow-lg brightness-110 contrast-125" />
-        </NuxtLink>
+          <NuxtLink to="/" class="flex items-center space-x-3 group">
+            <img src="/img/logo.jpg" alt="Salon Meri" class="h-14 w-auto transition-all duration-300 group-hover:scale-105 rounded-lg opacity-90 brightness-110 contrast-105 shadow-sm" />
+          </NuxtLink>
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-8">
           <NuxtLink v-for="item in menuItems" :key="item.to" :to="item.to" 
-            class="font-medium transition-all duration-300 relative group"
+            class="font-medium transition-all duration-300 relative group"x;
             :class="isBookingPage ? 'text-brown-800 hover:text-accent-600' : 'text-brown-700 hover:text-accent-500'">
             {{ item.label }}
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-500 transition-all duration-300 group-hover:w-full"></span>

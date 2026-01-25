@@ -85,16 +85,17 @@ const galleryImages = [
   // 2: Blondínka portrét
   { url: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=2070&auto=format&fit=crop&v=2', alt: 'Blond vlasy' },
   // 3: Krásna blondínka s dlhými vlasmi
-  { url: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?q=80&w=2074&auto=format&fit=crop&v=2', alt: 'Blond styling' },
-  // 4: Dlhé blond vlasy zozadu
-  { url: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=2080&auto=format&fit=crop&v=2', alt: 'Dlhé vlasy' },
+  { url: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?q=80&w=2074&auto=format&fit=crop&v=2', alt: 'Styling' },
+
   // 5: Farbenie vlasov - lokálna fotka (veľký obrázok vpravo)
   { url: '/img/balayage1.jpg', alt: 'Farbenie vlasov' },
   // 6: Highlights - lokálna fotka
   { url: '/img/highlights.jpg', alt: 'Melírovanie' },
-  // 7: Elegantný účes - svetlé vlasy
-  { url: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=2069&auto=format&fit=crop&v=2', alt: 'Elegantný účes' },
-  // 8: Zdravé vlasy - krásny portrét ženy
+  // 7: Interiér salónu 1 - lokálna fotka
+  { url: '/img/interier1.jpeg', alt: 'Interiér Salon Meri' },
+  // 8: Interiér salónu 2 - lokálna fotka
+  { url: '/img/interier2.jpeg', alt: 'Interiér salónu' },
+  // 10: Zdravé vlasy - krásny portrét ženy
   { url: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=2087&auto=format&fit=crop&v=2', alt: 'Zdravé vlasy' },
 ]
 
