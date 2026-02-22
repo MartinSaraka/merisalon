@@ -82,8 +82,8 @@ const galleryImages = [
   { url: '/img/balayage.jpg', alt: 'Balayage vlasy' },
   // 1: Hnedé lesklé vlasy - žena zozadu
   { url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2069&auto=format&fit=crop&v=2', alt: 'Lesklé vlasy' },
-  // 2: Blondínka portrét
-  { url: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=2070&auto=format&fit=crop&v=2', alt: 'Blond vlasy' },
+  // 2: Meri portrét
+  { url: '/img/salonmeriprofilovka.jpg', alt: 'Profesonálka Meri' },
   // 3: Krásna blondínka s dlhými vlasmi
   { url: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?q=80&w=2074&auto=format&fit=crop&v=2', alt: 'Styling' },
 
