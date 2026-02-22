@@ -86,7 +86,11 @@ useHead({
     { 
       name: 'description', 
       content: 'Rezervujte si termín v Salon Meri online. Farbenie, strihanie, regenerácia vlasov a líčenie v Bratislave - Ružinov. Jednoduchá online rezervácia 24/7.' 
-    }
+    },
+    { property: 'og:url', content: 'https://salonmeri.sk/rezervacia' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://salonmeri.sk/rezervacia' }
   ]
 })
 </script>

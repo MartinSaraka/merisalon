@@ -2,8 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon'],
-  
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/sitemap', 'nuxt-simple-robots'],
+
+  site: {
+    url: 'https://salonmeri.sk',
+    name: 'Salon Meri'
+  },
+
   app: {
     head: {
       htmlAttrs: {
@@ -19,18 +24,18 @@ export default defineNuxtConfig({
         { name: 'robots', content: 'index, follow' },
         // Open Graph
         { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Salon Meri' },
         { property: 'og:title', content: 'Salon Meri | Kaderníctvo Bratislava - Ružinov' },
         { property: 'og:description', content: 'Profesionálne kaderníctvo v Bratislave. Farbenie, balayage, melír, strihanie a regenerácia vlasov. Rezervujte online!' },
-        { property: 'og:image', content: '/og-image.jpg' },
-        { property: 'og:locale', content: 'sk_SK' },
-        // Twitter
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Salon Meri | Kaderníctvo Bratislava' },
-        { name: 'twitter:description', content: 'Profesionálne kaderníctvo v Bratislave. Rezervujte si termín online!' }
+        { property: 'og:image', content: 'https://salonmeri.sk/og-image.jpg' },
+        { property: 'og:image:alt', content: 'Salon Meri – kaderníctvo Bratislava' },
+        { property: 'og:image:width', content: '1024' },
+        { property: 'og:image:height', content: '1024' },
+        { property: 'og:url', content: 'https://salonmeri.sk' },
+        { property: 'og:locale', content: 'sk_SK' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'canonical', href: 'https://salonmeri.sk' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;500;600;700&display=swap' }
@@ -66,6 +71,10 @@ export default defineNuxtConfig({
         }
       ]
     }
+  },
+
+  sitemap: {
+    strictNuxtContentPaths: false
   },
 
   css: ['~/assets/css/main.css'],

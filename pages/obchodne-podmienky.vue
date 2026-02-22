@@ -75,7 +75,11 @@
 useHead({
   title: 'Obchodné podmienky | Salon Meri',
   meta: [
-    { name: 'description', content: 'Obchodné podmienky a pravidlá poskytovania služieb v Salon Meri.' }
+    { name: 'description', content: 'Obchodné podmienky a pravidlá poskytovania služieb v Salon Meri.' },
+    { property: 'og:url', content: 'https://salonmeri.sk/obchodne-podmienky' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://salonmeri.sk/obchodne-podmienky' }
   ]
 })
 </script>

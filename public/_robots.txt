@@ -1,9 +1,0 @@
-# robots.txt for Salon Elegance
-User-agent: *
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-
-# Sitemap location
-Sitemap: https://salonelegance.sk/sitemap.xml
-

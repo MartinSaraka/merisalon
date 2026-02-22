@@ -23,9 +23,11 @@ useHead({
     { 
       name: 'keywords', 
       content: 'kaderníctvo Bratislava, salon Meri, farbenie vlasov, balayage, ombre, melír, strihanie vlasov, regenerácia vlasov, botox na vlasy, líčenie, Ružinov, Ivanská cesta' 
-    }
+    },
+    { property: 'og:url', content: 'https://salonmeri.sk' }
   ],
   link: [
+    { rel: 'canonical', href: 'https://salonmeri.sk' },
     { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/img/favicon_meri.png' },
     { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/img/favicon_meri.png' },
     { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/favicon_meri.png' }

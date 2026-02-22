@@ -73,7 +73,11 @@
 useHead({
   title: 'Ochrana osobných údajov | Salon Meri',
   meta: [
-    { name: 'description', content: 'Informácie o spracovaní a ochrane osobných údajov v Salon Meri.' }
+    { name: 'description', content: 'Informácie o spracovaní a ochrane osobných údajov v Salon Meri.' },
+    { property: 'og:url', content: 'https://salonmeri.sk/ochrana-udajov' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://salonmeri.sk/ochrana-udajov' }
   ]
 })
 </script>

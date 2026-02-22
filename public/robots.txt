@@ -1,0 +1,7 @@
+# robots.txt for Salon Meri
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://salonmeri.sk/sitemap.xml
