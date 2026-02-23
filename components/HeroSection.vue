@@ -38,7 +38,7 @@
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in animation-delay-400">
           <NuxtLink to="/rezervacia" class="group w-full sm:w-auto bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white text-lg px-10 py-4 rounded-full shadow-soft hover:shadow-soft-lg transition-all duration-300">
             <span class="flex items-center justify-center space-x-2">
-              <span>Rezervovať termín</span>
+              <span>Rezervovať termín :</span>
               <Icon name="mdi:arrow-right" class="group-hover:translate-x-1 transition-transform" />
             </span>
           </NuxtLink>
