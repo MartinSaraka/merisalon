@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Salon Meri – Salón krásy | Kaderníctvo Bratislava - Ružinov',
+  title: 'Salón Meri – Salón krásy | Kaderníctvo Bratislava - Ružinov',
   meta: [
     { 
       name: 'description', 
