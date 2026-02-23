@@ -36,8 +36,8 @@
           <h2 class="section-title mb-6">Kde krása stretáva profesionalitu</h2>
           <div class="space-y-6 text-brown-600 leading-relaxed">
             <p class="text-lg">
-              Nie nadarmo sa hovorí, že vlasy sú korunou ženskej krásy. Držte sa aj Vy 
-              tohto kréda a garantujeme Vám, že budete neodolateľné.
+              V <strong>Salóne krásy Meri</strong> veríme, že vlasy sú korunou ženskej krásy. 
+              Držte sa aj Vy tohto kréda a garantujeme Vám, že budete neodolateľné.
             </p>
             <p>
               Dokonalá krása znamená pre každú osobu niečo iné. Je potrebné, aby sa 
