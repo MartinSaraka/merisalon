@@ -1,6 +1,6 @@
 <template>
   <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" 
-       :class="scrolled || isBookingPage ? 'bg-white/95 backdrop-blur-md shadow-soft' : 'bg-transparent'">
+       :class="scrolled || isSubPage ? 'bg-white/95 backdrop-blur-md shadow-soft' : 'bg-transparent'">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
@@ -12,7 +12,7 @@
         <div class="hidden md:flex items-center space-x-8">
           <NuxtLink v-for="item in menuItems" :key="item.to" :to="item.to" 
             class="font-medium transition-all duration-300 relative group"x;
-            :class="isBookingPage ? 'text-brown-800 hover:text-accent-600' : 'text-brown-700 hover:text-accent-500'">
+            :class="isSubPage ? 'text-brown-800 hover:text-accent-600' : 'text-brown-700 hover:text-accent-500'">
             {{ item.label }}
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-500 transition-all duration-300 group-hover:w-full"></span>
           </NuxtLink>
@@ -24,7 +24,7 @@
         <!-- Mobile Menu Button -->
         <button @click="mobileMenuOpen = !mobileMenuOpen" 
                 class="md:hidden p-2 rounded-xl transition-colors duration-300"
-                :class="isBookingPage ? 'text-brown-900 hover:bg-cream-300' : 'text-brown-800 hover:bg-cream-200'">
+                :class="isSubPage ? 'text-brown-900 hover:bg-cream-300' : 'text-brown-800 hover:bg-cream-200'">
           <Icon :name="mobileMenuOpen ? 'mdi:close' : 'mdi:menu'" class="text-3xl" />
         </button>
       </div>
@@ -37,7 +37,7 @@
           <NuxtLink v-for="item in menuItems" :key="item.to" :to="item.to" 
             @click="mobileMenuOpen = false"
             class="block text-lg font-medium transition-colors py-2"
-            :class="isBookingPage ? 'text-brown-800 hover:text-accent-600' : 'text-brown-700 hover:text-accent-500'">
+            :class="isSubPage ? 'text-brown-800 hover:text-accent-600' : 'text-brown-700 hover:text-accent-500'">
             {{ item.label }}
           </NuxtLink>
           <NuxtLink to="/rezervacia" @click="mobileMenuOpen = false" class="block btn-primary text-center mt-4">
@@ -50,11 +50,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
+const route = useRoute()
 const scrolled = ref(false)
 const mobileMenuOpen = ref(false)
-const isBookingPage = ref(false)
+
+const isSubPage = computed(() => route.path !== '/')
 
 const menuItems = [
   { label: 'Domov', to: '/' },
@@ -68,8 +70,6 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
-  // Check if we're on the booking page
-  isBookingPage.value = window.location.pathname === '/rezervacia'
   window.addEventListener('scroll', handleScroll)
 })
 

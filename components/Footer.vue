@@ -6,7 +6,7 @@
         <div class="lg:col-span-2">
           <div class="flex items-center space-x-3 mb-6">
             
-            <span class="font-serif text-2xl font-bold text-white">Salon Meri</span>
+            <span class="font-serif text-2xl font-bold text-white">Salón krásy Meri</span>
           </div>
           <p class="text-cream-300 mb-6 max-w-md leading-relaxed">
             Profesionálne kaderníctvo v Bratislave - Ružinov. 
@@ -91,7 +91,7 @@
       <!-- Bottom Bar -->
       <div class="border-t border-brown-700 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         <p class="text-cream-400 text-sm">
-          © {{ currentYear }} Salon Meri. Všetky práva vyhradené.
+          © {{ currentYear }} Salón Meri. Všetky práva vyhradené.
         </p>
         <div class="flex flex-wrap justify-center gap-6 text-sm">
           <NuxtLink to="/ochrana-udajov" class="text-cream-400 hover:text-accent-400 transition-colors">

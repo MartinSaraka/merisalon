@@ -10,7 +10,7 @@
           <div class="relative rounded-3xl overflow-hidden shadow-soft-xl">
             <img 
               src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2069&auto=format&fit=crop" 
-              alt="O nás - Salon Meri" 
+              alt="O nás - Salón Meri" 
               class="w-full h-[500px] object-cover"
             />
           </div>
