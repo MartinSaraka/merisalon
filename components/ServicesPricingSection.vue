@@ -49,7 +49,10 @@
                 class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg border border-cream-200 hover:border-accent-200 transition-all duration-300 hover:-translate-y-1 group"
               >
                 <div class="flex items-start justify-between mb-3">
-                  <h4 class="font-serif text-lg font-semibold text-brown-800 leading-tight pr-2">{{ service.name }}</h4>
+                  <h4 class="font-serif text-lg font-semibold text-brown-800 leading-tight pr-2">
+                    <NuxtLink v-if="service.detailPage" :to="service.detailPage" class="hover:text-accent-600 transition-colors">{{ service.name }}</NuxtLink>
+                    <template v-else>{{ service.name }}</template>
+                  </h4>
                   <span class="text-xl font-bold text-accent-600 whitespace-nowrap">
                     {{ service.pricePrefix }}{{ service.price }} €
                   </span>
@@ -171,7 +174,8 @@ const categories = [
         description: 'Úplné presvetlenie na mieru technikou balayage s konzultáciou, regeneračnou maskou a stylingom.',
         duration: '3h 10min',
         price: '200',
-        pricePrefix: 'od '
+        pricePrefix: 'od ',
+        detailPage: '/balayage'
       },
       {
         name: 'Farbenie vlasov',

@@ -14,19 +14,19 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'sk'
       },
-      title: 'Salon Meri – Salón krásy | Kaderníctvo Bratislava - Ružinov',
+      title: 'Salon Meri – Najlepšia balayage Bratislava | Kaderníctvo Ružinov',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Salón krásy Meri – profesionálne kaderníctvo v Bratislave - Ružinov. Farbenie vlasov, balayage, melír, strihanie, regenerácia. Rezervujte si termín online alebo telefonicky na 0902 730 860.' },
-        { name: 'keywords', content: 'kaderníctvo Bratislava, salon Meri, salon krásy Meri, salón krásy Meri, salón krásy Bratislava, salón krásy Ružinov, farbenie vlasov, balayage, melír, strihanie vlasov, regenerácia vlasov, Ružinov' },
+        { name: 'description', content: 'Najlepšia balayage v Bratislave – Salon Meri. Profesionálne kaderníctvo v Ružinove. Farbenie vlasov, balayage, melír, strihanie, regenerácia. Rezervujte online na 0902 730 860.' },
+        { name: 'keywords', content: 'najlepšia balayage Bratislava, balayage Bratislava, balayage Ružinov, kaderníctvo Bratislava, salon Meri, salón krásy Bratislava, farbenie vlasov, melír, strihanie vlasov, regenerácia vlasov' },
         { name: 'author', content: 'Salon Meri' },
         { name: 'robots', content: 'index, follow' },
         // Open Graph
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Salon Meri' },
-        { property: 'og:title', content: 'Salon Meri – Salón krásy | Kaderníctvo Bratislava - Ružinov' },
-        { property: 'og:description', content: 'Salón krásy Meri – profesionálne kaderníctvo v Bratislave. Farbenie, balayage, melír, strihanie a regenerácia vlasov. Rezervujte online!' },
+        { property: 'og:title', content: 'Salon Meri – Najlepšia balayage Bratislava | Kaderníctvo Ružinov' },
+        { property: 'og:description', content: 'Najlepšia balayage v Bratislave – Salon Meri. Profesionálne kaderníctvo v Ružinove. Farbenie, balayage, melír, strihanie a regenerácia vlasov. Rezervujte online!' },
         { property: 'og:image', content: 'https://salonmeri.sk/og-image.jpg' },
         { property: 'og:image:alt', content: 'Salon Meri – kaderníctvo Bratislava' },
         { property: 'og:image:width', content: '1024' },
@@ -71,7 +71,20 @@ export default defineNuxtConfig({
               'closes': '21:00'
             },
             'priceRange': '€€',
-            'sameAs': []
+            'sameAs': [],
+            'hasOfferCatalog': {
+              '@type': 'OfferCatalog',
+              'name': 'Služby Salon Meri',
+              'itemListElement': [
+                {
+                  '@type': 'Offer',
+                  'itemOffered': {
+                    '@type': 'Service',
+                    'name': 'Najlepšia balayage Bratislava – Balayage'
+                  }
+                }
+              ]
+            }
           })
         }
       ]

@@ -30,7 +30,7 @@
             </span>
           </h1>
           <p class="text-lg sm:text-xl md:text-2xl text-brown-600 max-w-2xl mx-auto leading-relaxed animate-slide-up animation-delay-200">
-            Farbenie, strihanie, regenerácia vlasov a líčenie v príjemnom prostredí s individuálnym prístupom.
+            Najlepšia balayage v Bratislave. Farbenie, strihanie, regenerácia vlasov a líčenie v príjemnom prostredí s individuálnym prístupom.
           </p>
         </div>
 

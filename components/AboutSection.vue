@@ -48,6 +48,10 @@
               Ponúkame nadštandardnú starostlivosť o Vaše vlasy s použitím vysoko kvalitnej 
               vlasovej kozmetiky.
             </p>
+            <p>
+              Špecializujeme sa na balayage techniku – prirodzené presvetlenie vlasov, ktoré vyzerá elegantne 
+              a bez ostrých prechodov. Pri výbere farby a štýlu vás radi poradíme.
+            </p>
           </div>
 
           <!-- Features -->

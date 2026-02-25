@@ -14,15 +14,15 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Salón Meri – Salón krásy | Kaderníctvo Bratislava - Ružinov',
+  title: 'Salon Meri – Najlepšia balayage Bratislava | Kaderníctvo Ružinov',
   meta: [
     { 
       name: 'description', 
-      content: 'Salón krásy Meri – profesionálne kaderníctvo v Bratislave - Ružinov. Farbenie vlasov, balayage, melír, strihanie, regenerácia a líčenie. Konzultácia zadarmo. Rezervujte na 0902 730 860.' 
+      content: 'Najlepšia balayage v Bratislave – Salon Meri. Profesionálne kaderníctvo v Ružinove. Farbenie vlasov, balayage, melír, strihanie, regenerácia a líčenie. Konzultácia zadarmo. Rezervujte na 0902 730 860.' 
     },
     { 
       name: 'keywords', 
-      content: 'kaderníctvo Bratislava, salon Meri, salon krásy Meri, salón krásy Meri, salón krásy Bratislava, salón krásy Ružinov, farbenie vlasov, balayage, ombre, melír, strihanie vlasov, regenerácia vlasov, botox na vlasy, líčenie, Ružinov, Ivanská cesta' 
+      content: 'najlepšia balayage Bratislava, balayage Bratislava, balayage Ružinov, kaderníctvo Bratislava, salon Meri, farbenie vlasov Bratislava, melír Bratislava, salón krásy Ružinov' 
     },
     { property: 'og:url', content: 'https://salonmeri.sk' }
   ],
