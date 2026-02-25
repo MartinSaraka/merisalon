@@ -6,28 +6,16 @@
     <div class="container mx-auto px-4 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <!-- Image Side -->
-        <div class="relative">
-          <div class="relative rounded-3xl overflow-hidden shadow-soft-xl">
+        <div class="relative lg:pl-4 flex justify-center lg:justify-start">
+          <div class="relative rounded-3xl overflow-hidden shadow-soft-xl bg-cream-100 aspect-[5/6] w-full max-w-[400px] md:max-w-[500px]">
             <img 
-              src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2069&auto=format&fit=crop" 
-              alt="O nás - Salón Meri" 
-              class="w-full h-[500px] object-cover"
+              src="/img/balayageprofil2.png" 
+              alt="Balayage – Salón Meri" 
+              class="w-full h-full object-contain object-center"
             />
           </div>
-          <!-- Floating Card -->
-          <div class="absolute -bottom-8 -right-4 md:right-8 bg-white rounded-2xl shadow-soft-lg p-6 max-w-[220px]">
-            <div class="flex items-center space-x-3 mb-3">
-              <div class="w-12 h-12 rounded-xl bg-accent-100 flex items-center justify-center">
-                <Icon name="mdi:heart" class="text-2xl text-accent-500" />
-              </div>
-              <div>
-                <p class="font-bold text-2xl text-brown-800">100%</p>
-                <p class="text-sm text-brown-500">Spokojnosť</p>
-              </div>
-            </div>
-          </div>
-          <!-- Decorative Circle -->
-          <div class="absolute -top-8 -left-8 w-32 h-32 rounded-full border-4 border-accent-200 opacity-50"></div>
+          <!-- Decorative accent -->
+          <div class="absolute -top-4 -left-4 w-24 h-24 rounded-2xl border-2 border-accent-200/60 -z-10"></div>
         </div>
 
         <!-- Content Side -->

@@ -10,17 +10,13 @@
         </p>
       </div>
 
-      <!-- Gallery Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1">
+      <!-- Gallery Grid – všetky fotky rovnakej veľkosti -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
         <div v-for="(image, index) in galleryImages" :key="index"
-          class="relative overflow-hidden rounded-2xl group cursor-pointer shadow-soft hover:shadow-soft-lg transition-all duration-500"
-          :class="[
-            index === 0 ? 'col-span-2 row-span-2 aspect-square' : 'aspect-[4/5]',
-            index === 5 ? 'lg:col-span-2 lg:row-span-2 lg:aspect-square' : ''
-          ]"
+          :class="['relative overflow-hidden rounded-2xl group cursor-pointer shadow-soft hover:shadow-soft-lg transition-all duration-500 aspect-[4/5]', image.fullFrame ? 'bg-cream-200' : '']"
           @click="openLightbox(index)">
           <img :src="image.url" :alt="image.alt" 
-            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            :class="['w-full h-full transition-transform duration-700', image.fullFrame ? 'object-contain group-hover:scale-105' : 'object-cover group-hover:scale-110']"
             loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-brown-900/80 via-brown-800/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <div class="absolute bottom-4 left-4 right-4">
@@ -78,25 +74,16 @@ const lightboxOpen = ref(false)
 const currentImageIndex = ref(0)
 
 const galleryImages = [
-  // 0: Balayage - lokálna fotka (veľký obrázok vľavo)
-  { url: '/img/balayage.jpg', alt: 'Balayage vlasy' },
-  // 1: Hnedé lesklé vlasy - žena zozadu
-  { url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2069&auto=format&fit=crop&v=2', alt: 'Lesklé vlasy' },
-  // 2: Meri portrét
-  { url: '/img/salonmeriprofilovka.jpg', alt: 'Profesonálka Meri' },
-  // 3: Krásna blondínka s dlhými vlasmi
-  { url: 'https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?q=80&w=2074&auto=format&fit=crop&v=2', alt: 'Styling' },
-
-  // 5: Farbenie vlasov - lokálna fotka (veľký obrázok vpravo)
-  { url: '/img/balayage1.jpg', alt: 'Farbenie vlasov' },
-  // 6: Highlights - lokálna fotka
+  { url: '/img/balayagefotka.png', alt: 'Balayage',fullFrame: true },
+  { url: '/img/salonmeriprofilovka.jpg', alt: 'Profesionálka Meri' },
+  { url: '/img/premena.png', alt: 'Premena' },
+  { url: '/img/balayageprofil.png', alt: 'Balayage', fullFrame: true },
+  { url: '/img/balayage3.png', alt: 'Balayage', fullFrame: true  },
+  { url: '/img/melir.png', alt: 'Melír', fullFrame: true },
+  { url: '/img/balayageprofil2.png', alt: 'Balayage' },
+  { url: '/img/teple_vlasy.png', alt: 'Teplé vlasy' },
   { url: '/img/highlights.jpg', alt: 'Melírovanie' },
-  // 7: Interiér salónu 1 - lokálna fotka
-  { url: '/img/interier1.jpeg', alt: 'Interiér Salon Meri' },
-  // 8: Interiér salónu 2 - lokálna fotka
   { url: '/img/interier2.jpeg', alt: 'Interiér salónu' },
-  // 10: Zdravé vlasy - krásny portrét ženy
-  { url: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=2087&auto=format&fit=crop&v=2', alt: 'Zdravé vlasy' },
 ]
 
 const openLightbox = (index: number) => {
