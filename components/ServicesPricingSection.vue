@@ -80,11 +80,12 @@
           </div>
         </div>
       </div>
-
-      <a href="/rezervacia" class="btn-primary inline-flex items-center space-x-2">
-  <Icon name="mdi:calendar-check" />
-  <span>Rezervovať termín</span>
-</a>
+      <div class="text-center mt-16">
+        <a href="/rezervacia" class="btn-primary inline-flex items-center space-x-2">
+          <Icon name="mdi:calendar-check" />
+          <span>Rezervovať termín</span>
+        </a>
+      </div>
     </div>
   </section>
 </template>

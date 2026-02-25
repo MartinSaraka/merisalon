@@ -7,11 +7,11 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <!-- Image Side -->
         <div class="relative lg:pl-4 flex justify-center lg:justify-start">
-          <div class="relative rounded-3xl overflow-hidden shadow-soft-xl bg-cream-100 aspect-[5/6] w-full max-w-[400px] md:max-w-[500px]">
+          <div class="relative rounded-3xl overflow-hidden shadow-soft-xl bg-cream-100 aspect-[4/3] w-full max-w-[500px] md:max-w-[600px]">
             <img 
-              src="/img/balayageprofil2.png" 
-              alt="Balayage – Salón Meri" 
-              class="w-full h-full object-contain object-center"
+              src="/img/interier_profilovka.jpeg" 
+              alt="Interiér Salón Meri" 
+              class="w-full h-full object-cover object-center"
             />
           </div>
           <!-- Decorative accent -->

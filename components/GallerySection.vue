@@ -11,7 +11,7 @@
       </div>
 
       <!-- Gallery Grid – všetky fotky rovnakej veľkosti -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         <div v-for="(image, index) in galleryImages" :key="index"
           :class="['relative overflow-hidden rounded-2xl group cursor-pointer shadow-soft hover:shadow-soft-lg transition-all duration-500 aspect-[4/5]', image.fullFrame ? 'bg-cream-200' : '']"
           @click="openLightbox(index)">
@@ -84,6 +84,8 @@ const galleryImages = [
   { url: '/img/teple_vlasy.png', alt: 'Farbenie' },
   { url: '/img/highlights.jpg', alt: 'Melírovanie' },
   { url: '/img/interier2.jpeg', alt: 'Interiér salónu' },
+  { url: '/img/IMG_5047.jpeg', alt: 'Balayage' },
+  { url: '/img/IMG_5048.jpeg', alt: 'Zdravé vlasy' },
 ]
 
 const openLightbox = (index: number) => {

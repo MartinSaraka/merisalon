@@ -105,7 +105,7 @@
 
       <!-- Alternative contact -->
       <div class="mt-8 pt-6 border-t border-cream-200 text-center">
-        <p class="text-brown-600 mb-4">Alebo nás kontaktujte priamo:</p>
+        <p class="text-brown-600 mb-4">Možnosť kontaktujte priamo:</p>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
           <a
             href="tel:+421902730860"
