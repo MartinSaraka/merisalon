@@ -56,10 +56,13 @@
           Objednajte si termín online alebo nás kontaktujte telefonicky
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <NuxtLink to="/rezervacia" class="inline-flex items-center justify-center space-x-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold py-4 px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-            <Icon name="mdi:calendar-check" class="text-2xl" />
-            <span>Rezervovať online</span>
-          </NuxtLink>
+          <a
+  href="/rezervacia"
+  class="inline-flex items-center justify-center space-x-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold py-4 px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+>
+  <Icon name="mdi:calendar-check" class="text-2xl" />
+  <span>Rezervovať online</span>
+</a>
           <a href="tel:+421902730860" class="inline-flex items-center justify-center space-x-2 bg-white hover:bg-cream-200 text-brown-800 font-semibold py-4 px-10 rounded-full border-2 border-accent-200 transition-all duration-300">
             <Icon name="mdi:phone" class="text-2xl text-accent-500" />
             <span>0902 730 860</span>

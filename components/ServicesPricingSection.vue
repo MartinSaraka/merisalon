@@ -67,13 +67,13 @@
                     <Icon name="mdi:clock-outline" class="mr-1" />
                     {{ service.duration }}
                   </span>
-                  <NuxtLink 
-                    to="/rezervacia" 
-                    class="text-accent-600 hover:text-accent-700 text-sm font-medium flex items-center md:opacity-0 md:group-hover:opacity-100 transition-opacity"
-                  >
-                    Objednať
-                    <Icon name="mdi:arrow-right" class="ml-1 text-sm" />
-                  </NuxtLink>
+                  <a
+  href="/rezervacia"
+  class="text-accent-600 hover:text-accent-700 text-sm font-medium flex items-center md:opacity-0 md:group-hover:opacity-100 transition-opacity"
+>
+  Objednať
+  <Icon name="mdi:arrow-right" class="ml-1 text-sm" />
+</a>
                 </div>
               </div>
             </div>
@@ -81,13 +81,10 @@
         </div>
       </div>
 
-      <!-- CTA -->
-      <div class="text-center mt-16">
-        <NuxtLink to="/rezervacia" class="btn-primary inline-flex items-center space-x-2">
-          <Icon name="mdi:calendar-check" />
-          <span>Rezervovať termín</span>
-        </NuxtLink>
-      </div>
+      <a href="/rezervacia" class="btn-primary inline-flex items-center space-x-2">
+  <Icon name="mdi:calendar-check" />
+  <span>Rezervovať termín</span>
+</a>
     </div>
   </section>
 </template>

@@ -81,11 +81,11 @@
 
           <!-- CTA -->
           <div class="mt-10">
-            <NuxtLink to="/rezervacia" class="btn-primary inline-flex items-center space-x-2">
-              <span>Rezervovať termín</span>
-              <Icon name="mdi:arrow-right" />
-            </NuxtLink>
-          </div>
+  <a href="/rezervacia" class="btn-primary inline-flex items-center space-x-2">
+    <span>Rezervovať termín</span>
+    <Icon name="mdi:arrow-right" />
+  </a>
+</div>
         </div>
       </div>
     </div>

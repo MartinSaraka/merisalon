@@ -34,21 +34,28 @@
           </p>
         </div>
 
-        <!-- CTA Buttons - matching accent colors -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in animation-delay-400">
-          <NuxtLink to="/rezervacia" class="group w-full sm:w-auto bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white text-lg px-10 py-4 rounded-full shadow-soft hover:shadow-soft-lg transition-all duration-300">
-            <span class="flex items-center justify-center space-x-2">
-              <span>Rezervovať termín</span>
-              <Icon name="mdi:arrow-right" class="group-hover:translate-x-1 transition-transform" />
-            </span>
-          </NuxtLink>
-          <a href="tel:+421902730860" class="w-full sm:w-auto text-lg px-10 py-4 rounded-full bg-white border-2 border-accent-200 text-brown-700 hover:border-accent-400 hover:bg-accent-50 transition-all duration-300">
-            <span class="flex items-center justify-center space-x-2">
-              <Icon name="mdi:phone" class="text-accent-500" />
-              <span>0902 730 860</span>
-            </span>
-          </a>
-        </div>
+<!-- CTA Buttons - matching accent colors -->
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in animation-delay-400">
+  <a
+    href="/rezervacia"
+    class="group w-full sm:w-auto bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white text-lg px-10 py-4 rounded-full shadow-soft hover:shadow-soft-lg transition-all duration-300"
+  >
+    <span class="flex items-center justify-center space-x-2">
+      <span>Rezervovať termín</span>
+      <Icon name="mdi:arrow-right" class="group-hover:translate-x-1 transition-transform" />
+    </span>
+  </a>
+
+  <a
+    href="tel:+421902730860"
+    class="w-full sm:w-auto text-lg px-10 py-4 rounded-full bg-white border-2 border-accent-200 text-brown-700 hover:border-accent-400 hover:bg-accent-50 transition-all duration-300"
+  >
+    <span class="flex items-center justify-center space-x-2">
+      <Icon name="mdi:phone" class="text-accent-500" />
+      <span>0902 730 860</span>
+    </span>
+  </a>
+</div>
 
         <!-- Benefits - matching site style -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16 max-w-2xl mx-auto animate-fade-in animation-delay-600">

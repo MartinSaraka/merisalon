@@ -52,11 +52,11 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/rezervacia" class="text-cream-300 hover:text-accent-400 transition-colors flex items-center space-x-2">
-                <Icon name="mdi:chevron-right" class="text-sm text-accent-400" />
-                <span>Rezervácia</span>
-              </NuxtLink>
-            </li>
+  <a href="/rezervacia" class="text-cream-300 hover:text-accent-400 transition-colors flex items-center space-x-2">
+    <Icon name="mdi:chevron-right" class="text-sm text-accent-400" />
+    <span>Rezervácia</span>
+  </a>
+</li>
           </ul>
         </div>
 
