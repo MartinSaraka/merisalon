@@ -36,7 +36,7 @@
       <!-- Fallback - ak sa widget nezobrazí -->
       <div class="mt-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-center">
         <p class="text-brown-700 text-sm">
-          <strong>Formulár sa vám nezobrazil?</strong> Kontaktujte nás priamo – radi vám pomôžeme s rezerváciou.
+          <strong>Formulár sa vám nezobrazil? </strong> Kontaktujte nás priamo – radi vám pomôžeme s rezerváciou.
         </p>
       </div>
 
