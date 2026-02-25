@@ -16,7 +16,7 @@
           :class="['relative overflow-hidden rounded-2xl group cursor-pointer shadow-soft hover:shadow-soft-lg transition-all duration-500 aspect-[4/5]', image.fullFrame ? 'bg-cream-200' : '']"
           @click="openLightbox(index)">
           <img :src="image.url" :alt="image.alt" 
-            :class="['w-full h-full transition-transform duration-700', image.fullFrame ? 'object-contain group-hover:scale-105' : 'object-cover group-hover:scale-110']"
+            :class="['w-full h-full transition-transform duration-700', image.fullFrame ? 'object-contain group-hover:scale-20' : 'object-cover group-hover:scale-110']"
             loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-brown-900/80 via-brown-800/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <div class="absolute bottom-4 left-4 right-4">
@@ -74,14 +74,14 @@ const lightboxOpen = ref(false)
 const currentImageIndex = ref(0)
 
 const galleryImages = [
-  { url: '/img/balayagefotka.png', alt: 'Balayage',fullFrame: true },
+  { url: '/img/balayage4.png', alt: 'Balayage'},
   { url: '/img/salonmeriprofilovka.jpg', alt: 'Profesionálka Meri' },
   { url: '/img/premena.png', alt: 'Premena' },
-  { url: '/img/balayageprofil.png', alt: 'Balayage', fullFrame: true },
-  { url: '/img/balayage3.png', alt: 'Balayage', fullFrame: true  },
-  { url: '/img/melir.png', alt: 'Melír', fullFrame: true },
+  { url: '/img/balayage5.png', alt: 'Balayage'},
+  { url: '/img/balayage3.png', alt: 'Balayage' },
+  { url: '/img/balayage6.png', alt: 'Balayage' },
   { url: '/img/balayageprofil2.png', alt: 'Balayage' },
-  { url: '/img/teple_vlasy.png', alt: 'Teplé vlasy' },
+  { url: '/img/teple_vlasy.png', alt: 'Farbenie' },
   { url: '/img/highlights.jpg', alt: 'Melírovanie' },
   { url: '/img/interier2.jpeg', alt: 'Interiér salónu' },
 ]

@@ -27,10 +27,7 @@
               V <strong>Salóne krásy Meri</strong> veríme, že vlasy sú korunou ženskej krásy. 
               Držte sa aj Vy tohto kréda a garantujeme Vám, že budete neodolateľné.
             </p>
-            <p>
-              Dokonalá krása znamená pre každú osobu niečo iné. Je potrebné, aby sa 
-              prispôsobila k Vašej osobnosti a zároveň k Vášmu individuálnemu štýlu.
-            </p>
+      
             <p>
               Poradíme Vám pri výbere Vášho nového strihu, účesu alebo novej farby vlasov. 
               Ponúkame nadštandardnú starostlivosť o Vaše vlasy s použitím vysoko kvalitnej 
