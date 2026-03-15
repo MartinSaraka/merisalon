@@ -85,6 +85,35 @@
               <span>Po-Ne: 08:00 - 21:00<br /><small class="text-cream-400">Na objednávku</small></span>
             </li>
           </ul>
+
+          <div class="mt-6 pt-4 border-t border-brown-700/70">
+            <p class="text-xs text-cream-400 mb-3">Certifikáty (kliknutím zväčšíte)</p>
+            <div class="grid grid-cols-4 gap-2">
+              <button
+                v-for="certificate in certificates"
+                :key="certificate.src"
+                type="button"
+                class="group relative w-full h-16 overflow-hidden rounded-md border border-brown-700 bg-brown-700/40 hover:border-accent-400 transition-colors"
+                :aria-label="`Zobraziť certifikát: ${certificate.title}`"
+                @click="openCertificate(certificate)"
+              >
+                <img
+                  v-if="certificate.type === 'image'"
+                  :src="certificate.src"
+                  :alt="certificate.title"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+                <div
+                  v-else
+                  class="w-full h-full bg-white text-brown-700 flex flex-col items-center justify-center"
+                >
+                  <Icon name="mdi:file-pdf-box" class="text-xl text-red-600" />
+                  <span class="text-[10px] font-semibold mt-1">PDF</span>
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -102,12 +131,99 @@
           </NuxtLink>
         </div>
       </div>
+
+    </div>
+
+    <!-- Certificate modal -->
+    <div
+      v-if="selectedCertificate"
+      class="fixed inset-0 z-50 bg-black/85 p-4 sm:p-8 flex items-center justify-center"
+      role="dialog"
+      aria-modal="true"
+      :aria-label="selectedCertificate.title"
+      @click.self="closeCertificate"
+    >
+      <button
+        type="button"
+        class="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+        aria-label="Zavrieť certifikát"
+        @click="closeCertificate"
+      >
+        <Icon name="mdi:close" class="text-2xl" />
+      </button>
+
+      <img
+        v-if="selectedCertificate.type === 'image'"
+        :src="selectedCertificate.src"
+        :alt="selectedCertificate.title"
+        class="max-w-[95vw] max-h-[85vh] object-contain rounded-lg shadow-2xl"
+      />
+
+      <iframe
+        v-else
+        :src="`${selectedCertificate.src}#page=1&view=FitH`"
+        title="PDF certifikát"
+        class="w-[95vw] max-w-4xl h-[85vh] bg-white rounded-lg shadow-2xl"
+      />
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 
 const currentYear = computed(() => new Date().getFullYear())
+
+type Certificate = {
+  title: string
+  src: string
+  type: 'image' | 'pdf'
+}
+
+const certificates: Certificate[] = [
+  {
+    title: 'Certifikát 1',
+    src: '/certs/IMG_5098.JPG',
+    type: 'image'
+  },
+  {
+    title: 'Certifikát 2',
+    src: '/certs/IMG_5099.JPG',
+    type: 'image'
+  },
+  {
+    title: 'Certifikát 3',
+    src: '/certs/IMG_5100.JPG',
+    type: 'image'
+  },
+  {
+    title: 'Certifikát 4',
+    src: '/certs/cert.jpg',
+    type: 'image'
+  }
+]
+
+const selectedCertificate = ref<Certificate | null>(null)
+
+function openCertificate(certificate: Certificate) {
+  selectedCertificate.value = certificate
+}
+
+function closeCertificate() {
+  selectedCertificate.value = null
+}
+
+function handleEscape(event: KeyboardEvent) {
+  if (event.key === 'Escape' && selectedCertificate.value) {
+    closeCertificate()
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', handleEscape)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleEscape)
+})
 </script>
