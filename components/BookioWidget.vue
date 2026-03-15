@@ -2,14 +2,14 @@
   <div class="bookio-widget-container">
     <div class="card-elegant p-6 sm:p-8">
       <div class="text-center mb-6">
-        <h3 class="font-serif text-2xl font-bold text-brown-800 mb-2">Online rezervácia</h3>
-        <p class="text-brown-600">Vyberte si termín, ktorý vám vyhovuje</p>
+        <h3 class="font-serif text-2xl font-bold text-neutral-900 mb-2">Online rezervácia</h3>
+        <p class="text-neutral-700">Vyberte si termín, ktorý vám vyhovuje</p>
       </div>
 
       <!-- Extra notice for in-app browsers (IG/FB/Messenger), where iframes often fail -->
       <div
         v-if="isInAppBrowser"
-        class="mb-4 p-4 rounded-xl bg-amber-50 border border-amber-200 text-brown-700 text-sm"
+        class="mb-4 p-4 rounded-xl bg-neutral-100 border border-neutral-300 text-neutral-800 text-sm"
         role="status"
       >
         <strong>Poznámka:</strong> Ak ste otvorili stránku cez Instagram/Facebook, rezervačný formulár sa
@@ -19,7 +19,7 @@
             :href="bookioUrl"
             target="_blank"
             rel="noopener"
-            class="inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold bg-accent-500 text-white hover:opacity-90 transition"
+            class="inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold bg-black text-white hover:bg-neutral-800 transition"
           >
             Otvoriť rezerváciu
           </a>
@@ -28,17 +28,17 @@
 
       <!-- Bookio Widget -->
       <div
-        class="rounded-2xl overflow-hidden bg-cream-50 relative"
+        class="rounded-2xl overflow-hidden bg-neutral-100 relative"
         :class="containerHeightClass"
       >
         <!-- Loading / Error overlay -->
         <div
           v-show="showOverlay"
-          class="absolute inset-0 flex flex-col items-center justify-center bg-cream-100 text-brown-600 z-10 p-6 text-center"
+          class="absolute inset-0 flex flex-col items-center justify-center bg-neutral-100 text-neutral-700 z-10 p-6 text-center"
           aria-live="polite"
         >
           <div class="flex flex-col items-center gap-4 max-w-md">
-            <Icon name="mdi:calendar-clock" class="text-5xl text-accent-400" />
+            <Icon name="mdi:calendar-clock" class="text-5xl text-neutral-700" />
             <p class="font-medium">
               {{ overlayTitle }}
             </p>
@@ -52,14 +52,14 @@
                 :href="bookioUrl"
                 target="_blank"
                 rel="noopener"
-                class="w-full inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold bg-accent-500 text-white hover:opacity-90 transition"
+                class="w-full inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold bg-black text-white hover:bg-neutral-800 transition"
               >
                 Otvoriť rezerváciu v novom okne
               </a>
 
               <button
                 type="button"
-                class="w-full inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold border border-brown-300 text-brown-700 hover:bg-cream-50 transition"
+                class="w-full inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold border border-neutral-400 text-neutral-800 hover:bg-neutral-50 transition"
                 @click="retry()"
               >
                 Skúsiť znova načítať
@@ -87,15 +87,15 @@
       </div>
 
       <!-- Fallback - ak sa widget nezobrazí -->
-      <div class="mt-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-center">
-        <p class="text-brown-700 text-sm">
+      <div class="mt-6 p-4 rounded-xl bg-neutral-100 border border-neutral-300 text-center">
+        <p class="text-neutral-800 text-sm">
           <strong>Formulár sa vám nezobrazil? </strong>
           Kliknite sem:
           <a
             :href="bookioUrl"
             target="_blank"
             rel="noopener"
-            class="font-semibold text-accent-700 underline"
+            class="font-semibold text-black underline"
           >
             otvoriť online rezerváciu
           </a>
@@ -104,20 +104,20 @@
       </div>
 
       <!-- Alternative contact -->
-      <div class="mt-8 pt-6 border-t border-cream-200 text-center">
-        <p class="text-brown-600 mb-4">Možnosť kontaktujte priamo:</p>
+      <div class="mt-8 pt-6 border-t border-neutral-200 text-center">
+        <p class="text-neutral-700 mb-4">Možnosť kontaktujte priamo:</p>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
           <a
             href="tel:+421902730860"
-            class="flex items-center space-x-2 text-accent-600 hover:text-accent-700 font-semibold transition-colors"
+            class="flex items-center space-x-2 text-neutral-800 hover:text-black font-semibold transition-colors"
           >
             <Icon name="mdi:phone" class="text-xl" />
             <span>0902 730 860</span>
           </a>
-          <span class="hidden sm:inline text-brown-300">|</span>
+          <span class="hidden sm:inline text-neutral-400">|</span>
           <a
             href="mailto:galojanm@gmail.com"
-            class="flex items-center space-x-2 text-accent-600 hover:text-accent-700 font-semibold transition-colors"
+            class="flex items-center space-x-2 text-neutral-800 hover:text-black font-semibold transition-colors"
           >
             <Icon name="mdi:email" class="text-xl" />
             <span>galojanm@gmail.com</span>

@@ -1,7 +1,7 @@
 <template>
   <nav
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
-    :class="scrolled || isSubPage ? 'bg-white/95 backdrop-blur-md shadow-soft' : 'bg-transparent'"
+    :class="scrolled || isSubPage ? 'bg-white/95 backdrop-blur-md shadow-soft border-b border-neutral-200/70' : 'bg-transparent'"
   >
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
@@ -21,10 +21,10 @@
             :key="item.to"
             :to="item.to"
             class="font-medium transition-all duration-300 relative group"
-            :class="isSubPage ? 'text-brown-800 hover:text-accent-600' : 'text-brown-700 hover:text-accent-500'"
+            :class="isSubPage || scrolled ? 'text-neutral-900 hover:text-black' : 'text-white hover:text-neutral-200'"
           >
             {{ item.label }}
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-500 transition-all duration-300 group-hover:w-full"></span>
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
           </NuxtLink>
 
           <!-- Najrobustnejšie: čistý anchor -->
@@ -38,7 +38,7 @@
           type="button"
           @click="mobileMenuOpen = !mobileMenuOpen"
           class="md:hidden p-2 rounded-xl transition-colors duration-300"
-          :class="isSubPage ? 'text-brown-900 hover:bg-cream-300' : 'text-brown-800 hover:bg-cream-200'"
+          :class="isSubPage || scrolled ? 'text-neutral-900 hover:bg-neutral-200' : 'text-white hover:bg-white/20'"
         >
           <Icon :name="mobileMenuOpen ? 'mdi:close' : 'mdi:menu'" class="text-3xl" />
         </button>
@@ -47,7 +47,7 @@
 
     <!-- Mobile Menu -->
     <Transition name="slide-fade">
-      <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-cream-200 shadow-soft-lg">
+      <div v-if="mobileMenuOpen" class="md:hidden bg-white border-t border-neutral-200 shadow-soft-lg">
         <div class="container mx-auto px-4 py-6 space-y-4">
           <NuxtLink
             v-for="item in menuItems"
@@ -55,7 +55,7 @@
             :to="item.to"
             @click="mobileMenuOpen = false"
             class="block text-lg font-medium transition-colors py-2"
-            :class="isSubPage ? 'text-brown-800 hover:text-accent-600' : 'text-brown-700 hover:text-accent-500'"
+            :class="'text-neutral-900 hover:text-black'"
           >
             {{ item.label }}
           </NuxtLink>

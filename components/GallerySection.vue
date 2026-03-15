@@ -1,11 +1,11 @@
 <template>
-  <section id="galeria" class="py-24 md:py-32 bg-cream-100 relative overflow-hidden">
+  <section id="galeria" class="py-24 md:py-32 bg-neutral-100 relative overflow-hidden">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16">
         <p class="section-subtitle">Galéria</p>
         <h2 class="section-title">Naša práca hovorí za nás</h2>
-        <p class="text-lg text-brown-600 mt-6">
+        <p class="text-lg text-neutral-600 mt-6">
           Pozrite si ukážky našich najlepších prác a nechajte sa inšpirovať
         </p>
       </div>
@@ -13,12 +13,12 @@
       <!-- Gallery Grid – všetky fotky rovnakej veľkosti -->
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
         <div v-for="(image, index) in galleryImages" :key="index"
-          :class="['relative overflow-hidden rounded-2xl group cursor-pointer shadow-soft hover:shadow-soft-lg transition-all duration-500 aspect-[4/5]', image.fullFrame ? 'bg-cream-200' : '']"
+          :class="['relative overflow-hidden rounded-2xl group cursor-pointer shadow-soft hover:shadow-soft-lg transition-all duration-500 aspect-[4/5]', image.fullFrame ? 'bg-neutral-200' : '']"
           @click="openLightbox(index)">
           <img :src="image.url" :alt="image.alt" 
             :class="['w-full h-full transition-transform duration-700', image.fullFrame ? 'object-contain group-hover:scale-20' : 'object-cover group-hover:scale-110']"
             loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-brown-900/80 via-brown-800/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <div class="absolute bottom-4 left-4 right-4">
               <p class="text-white font-serif font-semibold text-lg">{{ image.alt }}</p>
             </div>
@@ -33,16 +33,16 @@
 
       <!-- Video showcase -->
       <div class="mt-10">
-        <h3 class="font-serif text-2xl font-bold text-brown-800 mb-4">Video ukážky</h3>
+        <h3 class="font-serif text-2xl font-bold text-neutral-900 mb-4">Video ukážky</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div
             v-for="video in galleryVideos"
             :key="video.url"
-            class="relative rounded-2xl overflow-hidden shadow-soft border border-cream-200 bg-white cursor-pointer group"
+            class="relative rounded-2xl overflow-hidden shadow-soft border border-neutral-200 bg-white cursor-pointer group"
             @click="openVideoLightbox(video)"
           >
             <video
-              class="w-full h-80 md:h-[30rem] object-contain bg-brown-900"
+              class="w-full h-80 md:h-[30rem] object-contain bg-black"
               autoplay
               muted
               loop
@@ -54,7 +54,7 @@
             >
               <source :src="video.url" />
             </video>
-            <div class="absolute inset-0 bg-brown-950/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
               <div class="w-14 h-14 rounded-full bg-white/25 backdrop-blur-sm flex items-center justify-center">
                 <Icon name="mdi:magnify-plus" class="text-white text-2xl" />
               </div>
@@ -67,7 +67,7 @@
       <Teleport to="body">
       <Transition name="fade">
         <div v-if="lightboxOpen" 
-            class="fixed inset-0 z-[100] bg-brown-950/95 backdrop-blur-sm flex items-center justify-center p-4"
+            class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
           @click="closeLightbox">
             <button @click="closeLightbox" 
                     class="absolute top-6 right-6 text-white/80 hover:text-white transition-colors z-10"
@@ -101,7 +101,7 @@
       <Transition name="fade">
         <div
           v-if="videoLightboxOpen && selectedVideo"
-          class="fixed inset-0 z-[110] bg-brown-950/95 backdrop-blur-sm flex items-center justify-center p-4"
+          class="fixed inset-0 z-[110] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
           @click="closeVideoLightbox"
         >
           <button

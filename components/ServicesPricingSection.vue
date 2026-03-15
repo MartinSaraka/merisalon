@@ -1,9 +1,9 @@
 <template>
-  <section id="sluzby" class="py-24 md:py-32 bg-gradient-to-b from-cream-50 via-white to-cream-100 relative overflow-hidden">
+  <section id="sluzby" class="py-24 md:py-32 bg-gradient-to-b from-neutral-50 via-white to-neutral-100 relative overflow-hidden">
     <!-- Decorative background -->
     <div class="absolute inset-0 opacity-30">
-      <div class="absolute top-1/4 left-0 w-72 h-72 bg-primary-200 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-accent-200 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/4 left-0 w-72 h-72 bg-neutral-200 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-neutral-300 rounded-full blur-3xl"></div>
     </div>
 
     <div class="container mx-auto px-4 relative z-10">
@@ -11,7 +11,7 @@
       <div class="text-center max-w-3xl mx-auto mb-16">
         <p class="section-subtitle">Služby & Cenník</p>
         <h2 class="section-title">Naša ponuka služieb</h2>
-        <p class="text-lg text-brown-600 mt-6">
+        <p class="text-lg text-neutral-600 mt-6">
           Vyberte si zo širokej ponuky profesionálnych služieb. Ceny sa môžu líšiť podľa dĺžky a hustoty vlasov.
         </p>
       </div>
@@ -24,15 +24,15 @@
             @click="toggleCategory(category.id)"
             class="flex items-center w-full mb-4 md:mb-8 md:pointer-events-none text-left"
           >
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent-400 to-accent-500 flex items-center justify-center shadow-soft mr-4 flex-shrink-0">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-neutral-800 to-black flex items-center justify-center shadow-soft mr-4 flex-shrink-0">
               <Icon :name="category.icon" class="text-xl text-white" />
             </div>
-            <h3 class="font-serif text-xl md:text-2xl font-bold text-brown-800">{{ category.name }}</h3>
-            <div class="flex-1 h-px bg-gradient-to-r from-accent-200 to-transparent ml-4 md:ml-6 hidden md:block"></div>
+            <h3 class="font-serif text-xl md:text-2xl font-bold text-neutral-900">{{ category.name }}</h3>
+            <div class="flex-1 h-px bg-gradient-to-r from-neutral-300 to-transparent ml-4 md:ml-6 hidden md:block"></div>
             <!-- Mobile accordion arrow -->
             <Icon 
               name="mdi:chevron-down" 
-              class="md:hidden text-2xl text-accent-500 transition-transform duration-300 ml-auto flex-shrink-0"
+              class="md:hidden text-2xl text-neutral-700 transition-transform duration-300 ml-auto flex-shrink-0"
               :class="{ 'rotate-180': openCategories.includes(category.id) }"
             />
           </button>
@@ -46,30 +46,30 @@
               <div
                 v-for="service in category.services"
                 :key="service.name"
-                class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg border border-cream-200 hover:border-accent-200 transition-all duration-300 hover:-translate-y-1 group"
+                class="bg-white rounded-2xl p-5 shadow-soft hover:shadow-soft-lg border border-neutral-200 hover:border-neutral-400 transition-all duration-300 hover:-translate-y-1 group"
               >
                 <div class="flex items-start justify-between mb-3">
-                  <h4 class="font-serif text-lg font-semibold text-brown-800 leading-tight pr-2">
-                    <NuxtLink v-if="service.detailPage" :to="service.detailPage" class="hover:text-accent-600 transition-colors">{{ service.name }}</NuxtLink>
+                  <h4 class="font-serif text-lg font-semibold text-neutral-900 leading-tight pr-2">
+                    <NuxtLink v-if="service.detailPage" :to="service.detailPage" class="hover:text-black transition-colors">{{ service.name }}</NuxtLink>
                     <template v-else>{{ service.name }}</template>
                   </h4>
-                  <span class="text-xl font-bold text-accent-600 whitespace-nowrap">
+                  <span class="text-xl font-bold text-neutral-900 whitespace-nowrap">
                     {{ service.pricePrefix }}{{ service.price }} €
                   </span>
                 </div>
                 
-                <p class="text-brown-500 text-sm leading-relaxed mb-3 line-clamp-2">
+                <p class="text-neutral-600 text-sm leading-relaxed mb-3 line-clamp-2">
                   {{ service.description }}
                 </p>
                 
-                <div class="flex items-center justify-between pt-3 border-t border-cream-100">
-                  <span class="text-xs text-brown-400 flex items-center">
+                <div class="flex items-center justify-between pt-3 border-t border-neutral-200">
+                  <span class="text-xs text-neutral-500 flex items-center">
                     <Icon name="mdi:clock-outline" class="mr-1" />
                     {{ service.duration }}
                   </span>
                   <a
   href="/rezervacia"
-  class="text-accent-600 hover:text-accent-700 text-sm font-medium flex items-center md:opacity-0 md:group-hover:opacity-100 transition-opacity"
+  class="text-neutral-700 hover:text-black text-sm font-medium flex items-center md:opacity-0 md:group-hover:opacity-100 transition-opacity"
 >
   Objednať
   <Icon name="mdi:arrow-right" class="ml-1 text-sm" />

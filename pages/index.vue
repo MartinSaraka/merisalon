@@ -1,12 +1,16 @@
 <template>
-  <div>
+  <div class="relative overflow-hidden">
     <Navigation />
-    <HeroSection />
-    <AboutSection />
-    <ServicesPricingSection />
-    <GallerySection />
-    <TestimonialsSection />
-    <ContactSection />
+
+    <main>
+      <HeroSection />
+      <AboutSection />
+      <ServicesPricingSection />
+      <GallerySection />
+      <TestimonialsSection />
+      <ContactSection />
+    </main>
+
     <Footer />
     <ScrollToTop />
   </div>
@@ -16,21 +20,20 @@
 useHead({
   title: 'Salon Meri – Najlepšia balayage Bratislava | Kaderníctvo Ružinov',
   meta: [
-    { 
-      name: 'description', 
-      content: 'Najlepšia balayage v Bratislave – Salon Meri. Profesionálne kaderníctvo v Ružinove. Farbenie vlasov, balayage, melír, strihanie, regenerácia a líčenie. Konzultácia zadarmo. Rezervujte na 0902 730 860.' 
+    {
+      name: 'description',
+      content: 'Najlepšia balayage v Bratislave – Salon Meri. Profesionálne kaderníctvo v Ružinove. Farbenie vlasov, balayage, melír, strihanie, regenerácia. Rezervujte online na 0902 730 860.'
     },
-    { 
-      name: 'keywords', 
-      content: 'najlepšia balayage Bratislava, balayage Bratislava, balayage Ružinov, kaderníctvo Bratislava, salon Meri, farbenie vlasov Bratislava, melír Bratislava, salón krásy Ružinov' 
+    {
+      name: 'keywords',
+      content: 'najlepšia balayage Bratislava, balayage Bratislava, balayage Ružinov, kaderníctvo Bratislava, salon Meri, salón krásy Bratislava, farbenie vlasov, melír, strihanie vlasov, regenerácia vlasov'
     },
+    { property: 'og:title', content: 'Salon Meri – Najlepšia balayage Bratislava | Kaderníctvo Ružinov' },
+    { property: 'og:description', content: 'Najlepšia balayage v Bratislave – Salon Meri. Profesionálne kaderníctvo v Ružinove. Farbenie, balayage, melír, strihanie a regenerácia vlasov. Rezervujte online!' },
     { property: 'og:url', content: 'https://salonmeri.sk' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://salonmeri.sk' },
-    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/img/favicon_meri.png' },
-    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/img/favicon_meri.png' },
-    { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/favicon_meri.png' }
+    { rel: 'canonical', href: 'https://salonmeri.sk' }
   ]
 })
 </script>

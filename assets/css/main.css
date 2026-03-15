@@ -8,7 +8,7 @@
   }
   
   body {
-    @apply bg-cream-100 text-brown-800 antialiased font-sans;
+    @apply bg-white text-neutral-900 antialiased font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -16,35 +16,35 @@
   }
 
   ::selection {
-    @apply bg-accent-200 text-brown-900;
+    @apply bg-neutral-200 text-black;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-accent-500 hover:bg-accent-600 text-white font-semibold py-3.5 px-8 rounded-full 
-           transition-all duration-300 shadow-soft hover:shadow-soft-lg 
+    @apply bg-black hover:bg-neutral-800 text-white font-semibold py-3.5 px-8 rounded-full 
+           transition-all duration-300 shadow-soft hover:shadow-soft-lg
            transform hover:-translate-y-0.5 active:translate-y-0;
   }
   
   .btn-secondary {
-    @apply bg-cream-50 hover:bg-cream-200 text-brown-800 font-semibold py-3.5 px-8 
-           rounded-full border-2 border-primary-400 transition-all duration-300 
+    @apply bg-white hover:bg-neutral-100 text-neutral-900 font-semibold py-3.5 px-8 
+           rounded-full border-2 border-neutral-400 transition-all duration-300
            transform hover:-translate-y-0.5;
   }
 
   .btn-outline {
-    @apply bg-transparent hover:bg-accent-500 text-accent-600 hover:text-white 
-           font-semibold py-3.5 px-8 rounded-full border-2 border-accent-500 
+    @apply bg-transparent hover:bg-black text-neutral-800 hover:text-white
+           font-semibold py-3.5 px-8 rounded-full border-2 border-neutral-700
            transition-all duration-300;
   }
   
   .section-title {
-    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-brown-800 mb-4 leading-tight;
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-4 leading-tight;
   }
   
   .section-subtitle {
-    @apply text-accent-500 font-semibold text-sm md:text-base uppercase tracking-[0.2em] mb-3;
+    @apply text-neutral-600 font-semibold text-sm md:text-base uppercase tracking-[0.2em] mb-3;
   }
   
   .card {
@@ -52,17 +52,17 @@
   }
 
   .card-elegant {
-    @apply bg-gradient-to-br from-white to-cream-100 rounded-3xl shadow-soft 
-           hover:shadow-soft-xl transition-all duration-500 overflow-hidden 
-           border border-cream-300/50;
+    @apply bg-gradient-to-br from-white to-neutral-100 rounded-3xl shadow-soft
+           hover:shadow-soft-xl transition-all duration-500 overflow-hidden
+           border border-neutral-200/70;
   }
   
   .gradient-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-brown-900/80 via-brown-800/40 to-transparent;
+    @apply absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent;
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-accent-500 via-accent-600 to-primary-500 
+    @apply bg-gradient-to-r from-neutral-700 via-neutral-900 to-black
            bg-clip-text text-transparent;
   }
 
@@ -71,7 +71,7 @@
   }
 
   .glass-card {
-    @apply bg-white/80 backdrop-blur-md rounded-3xl border border-cream-300/50;
+    @apply bg-white/80 backdrop-blur-md rounded-3xl border border-neutral-300/60;
   }
 }
 
