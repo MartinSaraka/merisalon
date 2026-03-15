@@ -1,12 +1,12 @@
 <template>
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <!-- Background Image with Overlay - very soft cream like pricing section -->
+    <!-- Background Image with Overlay -->
     <div class="absolute inset-0 z-0">
       <div class="absolute inset-0 bg-gradient-to-b from-cream-50/95 via-white/90 to-cream-100/85 z-10"></div>
-      <img 
-        src="https://images.unsplash.com/photo-1633681122967-1a1b0e5ede23?q=80&w=2070&auto=format&fit=crop"
+      <img
+        src="/img/interier2.jpeg"
         alt="Salon Meri - Interiér kaderníctva"
-        class="w-full h-full object-cover opacity-40"
+        class="w-full h-full object-cover opacity-45"
         loading="eager"
       />
     </div>
