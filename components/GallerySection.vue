@@ -73,19 +73,25 @@ import { ref, watch } from 'vue'
 const lightboxOpen = ref(false)
 const currentImageIndex = ref(0)
 
-const galleryImages = [
-  { url: '/img/balayage4.png', alt: 'Balayage'},
+type GalleryImage = {
+  url: string
+  alt: string
+  fullFrame?: boolean
+}
+
+const galleryImages: GalleryImage[] = [
+  { url: '/img/balayage4.png', alt: ''},
   { url: '/img/salonmeriprofilovka.jpg', alt: 'Profesionálka Meri' },
   { url: '/img/premena.png', alt: 'Premena' },
-  { url: '/img/balayage5.png', alt: 'Balayage'},
-  { url: '/img/balayage3.png', alt: 'Balayage' },
-  { url: '/img/balayage6.png', alt: 'Balayage' },
-  { url: '/img/balayageprofil2.png', alt: 'Balayage' },
+  { url: '/img/balayage5.png', alt: ''},
+  { url: '/img/balayage6.png', alt: '' },
   { url: '/img/teple_vlasy.png', alt: 'Farbenie' },
-  { url: '/img/highlights.jpg', alt: 'Melírovanie' },
+  { url: '/img/IMG_5079.jpeg', alt: '' },
+  { url: '/img/IMG_5080.jpeg', alt: '' },
+  { url: '/img/IMG_5082.jpeg', alt: '' },
   { url: '/img/interier2.jpeg', alt: 'Interiér salónu' },
-  { url: '/img/IMG_5047.jpeg', alt: 'Balayage' },
-  { url: '/img/IMG_5048.jpeg', alt: 'Zdravé vlasy' },
+  { url: '/img/IMG_5047.jpeg', alt: '' },
+  { url: '/img/IMG_5048.jpeg', alt: '' },
 ]
 
 const openLightbox = (index: number) => {
